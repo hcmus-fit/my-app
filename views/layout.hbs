@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+{{#if user}}
+    Hello {{user.username}}
+    <form action="/auth/logout" method="post">
+        <input type="submit" value="Logout">
+    </form>
+{{else}}
+    <a href="/auth/login">Login</a>
+{{/if}}
+{{{body}}}
+</body>
+</html>
